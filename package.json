@@ -1,0 +1,57 @@
+{
+  "name": "ai-chat-subscription",
+  "version": "0.0.0",
+  "type": "module",
+  "imports": {
+    "#api-service/*": "./dist/apps/api-service/*",
+    "#utils/*": "./dist/packages/utils/*",
+    "#use-cases/*": "./dist/packages/use-cases/*",
+    "#domains/*": "./dist/packages/domains/*",
+    "#repositories/*": "./dist/packages/repositories/*",
+    "#clients/*": "./dist/packages/clients/*",
+    "#dtos/*": "./dist/apps/api-service/lib/dtos/*",
+    "#mappers/*": "./dist/apps/api-service/lib/mappers/*",
+    "#middlewares/*": "./dist/apps/api-service/lib/middlewares/*"
+  },
+  "main": "dist/apps/api-service/application.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/apps/api-service/application.js",
+    "dev": "tsx watch src/apps/api-service/application.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "mocha --require tsx tests/**/*.spec.ts"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-errors": "^3.0.0",
+    "ajv-formats": "^3.0.1",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.13.0",
+    "typeorm": "^0.3.20",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
+    "@eslint/js": "^9.39.1",
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-format": "^1.0.2",
+    "globals": "^16.5.0",
+    "prettier": "^3.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

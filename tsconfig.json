@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "#api-service/*": ["./src/apps/api-service/*"],
+      "#utils/*": ["./src/packages/utils/*"],
+      "#use-cases/*": ["./src/packages/use-cases/*"],
+      "#domains/*": ["./src/packages/domains/*"],
+      "#repositories/*": ["./src/packages/repositories/*"],
+      "#clients/*": ["./src/packages/clients/*"],
+      "#dtos/*": ["./src/apps/api-service/lib/dtos/*"],
+      "#mappers/*": ["./src/apps/api-service/lib/mappers/*"],
+      "#middlewares/*": ["./src/apps/api-service/lib/middlewares/*"]
+    },
+    "baseUrl": "."
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "tests"]
+}
